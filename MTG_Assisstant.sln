@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTG_Assisstant", "MTG_Assisstant\MTG_Assisstant.csproj", "{8417ECB5-7782-4919-9B19-057DC7411B92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScryfallAPICommunication", "ScryfallAPICommunication\ScryfallAPICommunication.csproj", "{620FCB6B-8D4A-402E-8BAE-BD7C75BC34C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8417ECB5-7782-4919-9B19-057DC7411B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8417ECB5-7782-4919-9B19-057DC7411B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8417ECB5-7782-4919-9B19-057DC7411B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8417ECB5-7782-4919-9B19-057DC7411B92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{620FCB6B-8D4A-402E-8BAE-BD7C75BC34C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{620FCB6B-8D4A-402E-8BAE-BD7C75BC34C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{620FCB6B-8D4A-402E-8BAE-BD7C75BC34C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{620FCB6B-8D4A-402E-8BAE-BD7C75BC34C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6849A0B8-0534-4ED7-B942-12EB49FAD942}
+	EndGlobalSection
+EndGlobal
