@@ -18,7 +18,7 @@ namespace MTG_Assisstant
         static async Task Data()
         {
             ScryfallAPICommunication.ApiCommunication newCom = new ScryfallAPICommunication.ApiCommunication("https://api.scryfall.com");
-            var data = await ScryfallAPICommunication.CardImageSearch.SearchCardImage("8ed", "274");
+            var data = await ScryfallAPICommunication.CardSearch.BuildCardData("znr", "192");
             Console.ReadLine();            
         }
     }
