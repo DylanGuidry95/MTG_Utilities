@@ -18,7 +18,7 @@ namespace MTG_Assisstant
         static async Task Data()
         {
             ScryfallAPICommunication.ApiCommunication newCom = new ScryfallAPICommunication.ApiCommunication("https://api.scryfall.com");
-            var data = await ScryfallAPICommunication.CardSearch.AutoCompleteCardName("breed");
+            var data = await ScryfallAPICommunication.PriceSearch.GetTcgPlayerPrice("8ed", "274");
             foreach(var kvp in data)
             {
                 Console.WriteLine("{0}: {1}", kvp.Key, kvp.Value);
