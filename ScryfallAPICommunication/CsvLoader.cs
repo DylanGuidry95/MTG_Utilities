@@ -17,11 +17,11 @@ namespace ScryfallAPICommunication
 
             parser.HasFieldsEnclosedInQuotes = true;
             parser.SetDelimiters(",");
-            
+                        
             while(!parser.EndOfData)
             {
                 var line = parser.ReadFields();
-                if (line[0] == "Quantity")
+                if (parser.LineNumber == 2)
                     continue;
                 var newCard = new CardData()
                 {
