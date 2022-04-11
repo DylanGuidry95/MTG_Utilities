@@ -58,23 +58,13 @@ namespace ScryfallAPICommunication
         }
 
         public static async Task<CardData> BuildCardData(string set_code, string number)
-        {
+        {            
             var data = await SearchCardBySetID(set_code, number);
             var card = new CardData()
             {
                 Name = data["name"],
                 SetCode = set_code,
-                PrintingNumber = number,
-                ScryfallId = data["id"],
-                Language = data["lang"],
-                TCGPlayerId = data["tcgplayer_id"],
-                CardMarketId = data["cardmarket_id"],
-                ArenaId = data["arena_id"],
-                MultiverseId = data["multiverse_ids"].ToString(Newtonsoft.Json.Formatting.None),
-                MtgoId = data["mtgo_id"],
-                Keywords = data["keywords"].ToString(Newtonsoft.Json.Formatting.None),
-                ConvertedManaCost = data["cmc"],
-                Colors = data["color_identity"].ToString(Newtonsoft.Json.Formatting.None)
+                PrintingNumber = number
             };
             return card;
         }
