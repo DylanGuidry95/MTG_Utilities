@@ -18,7 +18,11 @@ namespace MTG_Assisstant
         static async Task Data()
         {
             ScryfallAPICommunication.ApiCommunication newCom = new ScryfallAPICommunication.ApiCommunication("https://api.scryfall.com");
-            var data = ScryfallAPICommunication.CsvLoader.LoadFromCSV(@"C:\Users\guidr\source\repos\MTG_Assisstant\kagicol.csv");
+            var data = await ScryfallAPICommunication.CsvLoader.LoadFromCSV(@"C:\Users\guidr\source\repos\MTG_Assisstant\kagicol.csv");            
+            foreach (var d in data)
+            {
+                Console.WriteLine(d.ToString() + "\n");
+            }
             Console.ReadLine();            
         }
     }
