@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AWSCommunication\AWSCommunication.csproj" />
     <ProjectReference Include="..\ScryfallAPICommunication\ScryfallAPICommunication.csproj" />
   </ItemGroup>
 

@@ -3,6 +3,7 @@ using System.Net.Http.Headers;
 using System.Net.Http;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using AWSCommunication;
 
 namespace MTG_Assisstant
 {
@@ -17,13 +18,13 @@ namespace MTG_Assisstant
 
         static async Task Data()
         {
-            ScryfallAPICommunication.ApiCommunication newCom = new ScryfallAPICommunication.ApiCommunication("https://api.scryfall.com");
-            var data = await ScryfallAPICommunication.CsvLoader.LoadFromCSV(@"C:\Users\guidr\source\repos\MTG_Assisstant\kagicol.csv");            
-            foreach (var d in data)
-            {
-                Console.WriteLine(d.ToString() + "\n");
-            }
-            Console.ReadLine();            
+            var newService = new CognitoCommunication("us-east-1:ef819d05-dc22-4b12-879b-d28c18a8aeb0",
+                "35otkm9kefk1m5j9lprvamc0b2", "us-east-1_HZY2fnDBy", Amazon.RegionEndpoint.USEast1);
+
+            //var result = await newService.SignUp("TestAccount", "guidry.dylan.95@gmail.com", "p@55wOrd");
+            //var result = await newService.ConfirmRegistration("TestAccount", "645978");
+            var result = await newService.Login("TestAccount", "p@55wOrd");
+            Console.WriteLine(result["Message"]);
         }
     }
 }
