@@ -23,8 +23,14 @@ namespace MTG_Assisstant
 
             //var result = await newService.SignUp("TestAccount", "guidry.dylan.95@gmail.com", "p@55wOrd");
             //var result = await newService.ConfirmRegistration("TestAccount", "645978");
-            var result = await newService.Login("TestAccount", "p@55wOrd");
-            Console.WriteLine(result["Message"]);
+            //var result = await newService.Login("TestAccount", "p@55wOrd");
+
+            var table = new DynamoCommunication();
+            await table.TryCreateTable("TestTable",
+                new List<KeyValuePair<string, string>> { new KeyValuePair<string, string>("Id", "N") },
+                new List<KeyValuePair<string, string>> { new KeyValuePair<string, string>("Id", "HASH") });
+
+            //Console.WriteLine(result["Message"]);
         }
     }
 }
